@@ -1,6 +1,6 @@
 # ---
 # Google Chrome installation.
-# @see https://www.google.com/intl/es_es/chrome/
+# @see https://www.google.com/chrome/
 # ---
 
 # are you sudo?
