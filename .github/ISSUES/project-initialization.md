@@ -6,7 +6,7 @@ labels: enhancement
 assignees: sergio-ridaura
 project: bash-scripts
 milestone: New development
-status: backlog
+status: done
 efforts: 4
 startDate: 2024-05-05
 dueDate: 2024-05-05
