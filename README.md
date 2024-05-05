@@ -1,4 +1,4 @@
-# Bash scripts v1.0.0
+# Bash scripts v1.1.0
 
 _Copyright (c) 2024 [Sergio Ridaura](https://github.com/sergio-ridaura)._
 

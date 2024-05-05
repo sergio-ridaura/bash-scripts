@@ -11,3 +11,9 @@ fi
 CURRENT_PATH="$(pwd)"
 DEV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SCRIPTS_PATH="${DEV_PATH}/bash"
+
+if [ -e "${DEV_PATH}/.env.bash" ]; then
+  . "${DEV_PATH}/.env.bash"
+else
+  . "${DEV_PATH}/.env.bash.default"
+fi
