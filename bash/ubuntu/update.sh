@@ -3,12 +3,27 @@
 SCRIPT_NAME="ubuntu_update"
 SCRIPT_DESCRIPTION="Updating and cleaning the Ubuntu Operating System."
 SCRIPT_DESCRIPTION_ES="Actualización y limpieza del Sistema Operativo Ubuntu."
-SCRIPT_VERSION="24.05.05."
+SCRIPT_VERSION="24.05.05"
 SCRIPT_SEE="https://askubuntu.com/questions/196768/how-to-install-updates-via-command-line"
 
+# tools
 . "$(dirname "$0")/../bash-utilities.sh"
 
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get autoremove -y
-sudo apt-get autoclean -y
+# code
+CODE() {
+  $IS_ROOT apt-get update
+  $IS_ROOT apt-get upgrade -y
+  $IS_ROOT apt-get autoremove -y
+  $IS_ROOT apt-get autoclean -y
+}
+
+# update
+if [ "$ARG_BASH_I" != true ]; then
+  if [ "$ARG_BASH_Q" == true ]; then
+    echo -en "$TEXT_DANGER"
+    CODE &>/dev/null
+    echo -en "$TEXT_DEFAULT"
+  else
+    CODE
+  fi
+fi
