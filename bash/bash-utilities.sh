@@ -132,6 +132,11 @@ if [[ "${ARG_BASH_M}" == false ]]; then
   echo -e "${TEXT_INFO}---${TEXT_DEFAULT}"
 fi
 
+# errors
+ERROR_ARGUMENT_MISSING() {
+  echo -e "${TEXT_DANGER}ERROR: \"${SCRIPT_ARG[$1]}\" argument is missing${TEXT_DEFAULT}" && exit 1
+}
+
 # clean arguments
 new_args=()
 for arg in "$@"; do
