@@ -19,6 +19,8 @@ email=$GIT_USER_EMAIL
 
 # config
 if [ "$ARG_BASH_I" != true ]; then
+  echo -en "$TEXT_DANGER"
   git config user.name $user
   git config user.email $email
+  echo -en "$TEXT_DEFAULT"
 fi

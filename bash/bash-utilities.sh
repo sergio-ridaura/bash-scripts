@@ -25,6 +25,30 @@ ARG_BASH_Y=false
 
 RUN_ROOT=""
 
+# text in console
+TEXT_DEFAULT="\e[0m"
+
+TEXT_BLUE="\e[1;34m"
+TEXT_CYAN="\e[1;36m"
+TEXT_GREEN="\e[1;32m"
+TEXT_MAGENTA="\e[1;35m"
+TEXT_ORANGE="\e[38;5;214m"
+TEXT_RED="\e[1;31m"
+TEXT_YELLOW="\e[1;33m"
+TEXT_GRAY="\e[38;5;240m"
+
+TEXT_PRIMARY="${TEXT_MAGENTA}"
+TEXT_SECONDARY="${TEXT_CYAN}"
+TEXT_SUCCESS="${TEXT_GREEN}"
+TEXT_DANGER="${TEXT_RED}"
+TEXT_WARNING="${TEXT_ORANGE}"
+TEXT_INFO="${TEXT_BLUE}"
+TEXT_MUTED="${TEXT_GRAY}"
+
+TEXT_BOLD="\e[1m"
+TEXT_UNDERLINE="\e[4m"
+TEXT_DIM="\e[2m"
+
 # flags
 for arg in "$@"; do
   case "$arg" in
@@ -76,6 +100,36 @@ fi
 # are you sudo?
 if [[ "$(whoami)" != "root" && "${EUID}" -ne 0 ]]; then
   IS_ROOT="sudo"
+fi
+
+# info
+if [[ "${ARG_BASH_M}" == false ]]; then
+  echo -e "${TEXT_INFO}---"
+  echo -e "${TEXT_PRIMARY}${SCRIPT_NAME}"
+  echo -e "${TEXT_INFO}"
+
+  echo "@vers ${SCRIPT_VERSION}"
+  if [ "$(echo "$LANG" | cut -d '_' -f 1)" == "es" ]; then
+    echo "@desc ${SCRIPT_DESCRIPTION_ES}"
+  else
+    echo "@desc ${SCRIPT_DESCRIPTION}"
+  fi
+  [[ -n "${SCRIPT_SEE}" ]] && echo "@see ${SCRIPT_SEE}"
+  [[ -n "${SCRIPT_NOTE}" ]] && echo "@note ${SCRIPT_NOTE}"
+
+  for element in "${SCRIPT_ARG[@]}"; do
+    echo "@arg ${element}"
+  done
+
+  echo -e "${TEXT_SECONDARY}"
+
+  if [ -n "${SCRIPT_AUTHOR}" ]; then
+    echo -e "${SCRIPT_AUTHOR}"
+  else
+    echo "© 2024 Sergio Ridaura. https://github.com/sergio-ridaura"
+  fi
+
+  echo -e "${TEXT_INFO}---${TEXT_DEFAULT}"
 fi
 
 # clean arguments
