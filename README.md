@@ -27,7 +27,7 @@ Create your new scripts in the `bash` folder. Use the existing scripts as a guid
 To execute the scripts, they need permissions, for example:
 
 ```console
-chmod +x /bash/ubuntu/update.sh
+chmod +x bash/ubuntu/update.sh
 ```
 
 ## Execution
@@ -72,7 +72,7 @@ In the scripts, there are flags to modify the default behavior. For example, if 
 
 ## Export
 
-Add an empty `bash` folder to your repository and copy the `.env.bash`, `.env.bash.default` and `bash/bash-tools.sh` files.
+Add an empty `bash` folder to your repository and copy the `.env.bash`, `.env.bash.default` and `bash/bash-utilities.sh` files.
 
 Add your scripts or copy the scripts you consider from this collection to the `bash` folder.
 
