@@ -1,0 +1,18 @@
+services:
+
+  node:
+    image: ubuntu
+    container_name: bash-scripts_ubuntu
+    ports:
+      - 80:80
+    networks:
+      - network
+    volumes:
+      - ./:/home/node
+    working_dir: /home/node/
+    restart: unless-stopped
+    tty: true
+
+networks:
+  network:
+    driver: bridge
