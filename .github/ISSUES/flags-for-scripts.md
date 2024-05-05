@@ -1,13 +1,13 @@
 ---
 name: Issue
 about: Suggest an idea for this project
-title: Bash environment variables
+title: Flags for scripts
 labels: enhancement
 assignees: sergio-ridaura
 project: bash-scripts
 milestone: Starting utilities for scripts
 status: backlog
-efforts: 2
+efforts: 4
 startDate: 2024-05-05
 dueDate: 2024-05-05
 endDate: 2024-05-05
@@ -15,4 +15,4 @@ endDate: 2024-05-05
 
 ## Describe the feature
 
-System for using environment variables in Bash scripts.
+Flags in scripts allow you to modify the default behavior.
