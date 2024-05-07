@@ -4,7 +4,7 @@ if [[ "$0" == *"/bash-utilities.sh" ]]; then
   SCRIPT_NAME="bash-utilities"
   SCRIPT_DESCRIPTION="Tool to manage my collection of Bash scripts."
   SCRIPT_DESCRIPTION_ES="Herramienta para gestionar mi colección de scripts de Bash."
-  SCRIPT_VERSION="24.05.05"
+  SCRIPT_VERSION="24.05.07"
   SCRIPT_SEE="https://github.com/sergio-ridaura/bash-scripts"
 fi
 
@@ -25,7 +25,7 @@ ARG_BASH_Y=false
 
 RUN_ROOT=""
 
-# text in console
+# colors
 TEXT_DEFAULT="\e[0m"
 
 TEXT_BLUE="\e[1;34m"
@@ -135,6 +135,10 @@ fi
 # errors
 ERROR_ARGUMENT_MISSING() {
   echo -e "${TEXT_DANGER}ERROR: \"${SCRIPT_ARG[$1]}\" argument is missing${TEXT_DEFAULT}" && exit 1
+}
+
+ERROR_NOT_FOUND() {
+  echo -e "${TEXT_DANGER}ERROR: \"${1}\" not found${TEXT_DEFAULT}" && exit 1
 }
 
 # clean arguments

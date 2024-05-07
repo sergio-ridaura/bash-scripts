@@ -20,9 +20,7 @@ CODE() {
 # update
 if [ "$ARG_BASH_I" != true ]; then
   if [ "$ARG_BASH_Q" == true ]; then
-    echo -en "$TEXT_DANGER"
     CODE &>/dev/null
-    echo -en "$TEXT_DEFAULT"
   else
     CODE
   fi

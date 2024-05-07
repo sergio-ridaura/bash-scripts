@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SCRIPT_NAME="git-app_config_local_user_add"
+SCRIPT_NAME="git-app_config_local"
 SCRIPT_DESCRIPTION="Git user local configuration."
 SCRIPT_DESCRIPTION_ES="Configuración local del usuario de Git."
-SCRIPT_VERSION="24.05.05"
+SCRIPT_VERSION="24.05.06"
 SCRIPT_SEE="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"
 SCRIPT_ARG=(user email)
 
@@ -21,8 +21,6 @@ email=$GIT_USER_EMAIL
 
 # config
 if [ "$ARG_BASH_I" != true ]; then
-  echo -en "$TEXT_DANGER"
   git config user.name $user
   git config user.email $email
-  echo -en "$TEXT_DEFAULT"
 fi
