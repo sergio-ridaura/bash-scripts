@@ -18,6 +18,6 @@ if [ "$ARG_BASH_I" != true ]; then
       blender --version
     fi
   else
-    ERROR_NOT_FOUND Blender
+    ERROR_NOT_FOUND "Blender"
   fi
 fi

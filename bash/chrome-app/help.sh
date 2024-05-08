@@ -14,6 +14,6 @@ if [ "$ARG_BASH_I" != true ]; then
   if command -v google-chrome &>/dev/null; then
     google-chrome --help
   else
-    ERROR_NOT_FOUND Google Chrome
+    ERROR_NOT_FOUND "Google Chrome"
   fi
 fi
