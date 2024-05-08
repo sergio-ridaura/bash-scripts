@@ -14,6 +14,6 @@ if [ "$ARG_BASH_I" != true ]; then
   if command -v blender &>/dev/null; then
     which blender
   else
-    ERROR_NOT_FOUND Blender
+    ERROR_NOT_FOUND "Blender"
   fi
 fi

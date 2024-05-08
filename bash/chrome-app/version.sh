@@ -18,6 +18,6 @@ if [ "$ARG_BASH_I" != true ]; then
       google-chrome --version
     fi
   else
-    ERROR_NOT_FOUND Google Chrome
+    ERROR_NOT_FOUND "Google Chrome"
   fi
 fi
