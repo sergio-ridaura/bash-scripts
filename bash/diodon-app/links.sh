@@ -15,5 +15,5 @@ if [ "$ARG_BASH_H" != true ]; then
 - Official website    https://launchpad.net/diodon
 - Repository          https://github.com/diodon-dev/diodon
 - Wikipedia           https://en.wikipedia.org/wiki/Diodon_(software)
-- Stack Overflow      https://stackoverflow.com/questions/tagged/diodon
+- Stack Overflow      https://stackoverflow.com/questions/tagged/diodon"
 fi
