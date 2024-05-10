@@ -3,7 +3,7 @@
 SCRIPT_NAME="ubuntu_laptop_switch-ignore"
 SCRIPT_DESCRIPTION="Configure Ubuntu to prevent it from going to sleep when you close the lid."
 SCRIPT_DESCRIPTION_ES="Configura Ubuntu para evitar que entre en modo de suspensión cuando cierre la tapa."
-SCRIPT_VERSION="24.05.05"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://askubuntu.com/questions/1048063/ubuntu-server-how-do-disable-sleep-when-laptop-screen-is-closed-but-allow-scre"
 
 # tools
@@ -16,7 +16,7 @@ CODE() {
 }
 
 # do not sleep
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [ "$ARG_BASH_Q" == true ]; then
     CODE &>/dev/null
   else

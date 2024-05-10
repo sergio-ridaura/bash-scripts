@@ -3,7 +3,7 @@
 SCRIPT_NAME="ubuntu_update"
 SCRIPT_DESCRIPTION="Updating and cleaning the Ubuntu Operating System."
 SCRIPT_DESCRIPTION_ES="Actualización y limpieza del Sistema Operativo Ubuntu."
-SCRIPT_VERSION="24.05.05"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://askubuntu.com/questions/196768/how-to-install-updates-via-command-line"
 
 # tools
@@ -18,7 +18,7 @@ CODE() {
 }
 
 # update
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [ "$ARG_BASH_Q" == true ]; then
     CODE &>/dev/null
   else

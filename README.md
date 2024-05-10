@@ -1,4 +1,4 @@
-# Bash scripts v24.05.08
+# Bash scripts v24.05.10
 
 _Copyright (c) 2024 [Sergio Ridaura](https://github.com/sergio-ridaura)._
 
@@ -60,15 +60,15 @@ In the scripts, there are flags to modify the default behavior. For example, if 
 ./bash/ubuntu/update.sh -s -m
 ```
 
-- `-c` : Clears the screen before executing the script.
-- `-i` : Displays information and does not execute the script.
-- `-m` : Does not display script information on the screen.
-- `-n` : Answers No to script questions.
-- `-q` : Runs in quiet mode.
-- `-s` : Short response.
-- `-u` : Runs as sudo user.
-- `-v` : Displays the script version.
-- `-y` : Answers Yes to script questions.
+- `-c` / `--clear`:   Clears the screen before executing the script.
+- `-h` / `--help`:    Displays information and does not execute the script.
+- `-m` / `--mute`:    Does not display script information on the screen.
+- `-n` / `--not`:     Answers No to script questions.
+- `-q` / `--quiet`:   Runs in quiet mode.
+- `-s` / `--short`:   Short response.
+- `-u` / `--sudo`:    Runs as sudo user.
+- `-v` / `--version`: Displays the script version.
+- `-y` / `--yes`:     Answers Yes to script questions.
 
 ## Export
 

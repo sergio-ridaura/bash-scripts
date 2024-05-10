@@ -3,7 +3,7 @@
 SCRIPT_NAME="blender-app_install"
 SCRIPT_DESCRIPTION="Blender application installation."
 SCRIPT_DESCRIPTION_ES="Instalación de la aplicación Blender."
-SCRIPT_VERSION="24.05.07"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://www.blender.org/download/"
 
 # tools
@@ -15,7 +15,7 @@ CODE() {
 }
 
 # install
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [ "$ARG_BASH_M" = true -a "$ARG_YES" = "-y" ]; then
     CODE &>/dev/null
   else

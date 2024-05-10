@@ -3,7 +3,7 @@
 SCRIPT_NAME="ubuntu_restricted-extras_install"
 SCRIPT_DESCRIPTION="Allows non-free tools in Ubuntu."
 SCRIPT_DESCRIPTION_ES="Permite herramientas no libres en Ubuntu."
-SCRIPT_VERSION="24.05.06"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://askubuntu.com/questions/56446/how-do-i-install-the-ubuntu-restricted-extras-package"
 
 # tools
@@ -15,7 +15,7 @@ CODE() {
 }
 
 # install
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [ "$ARG_BASH_M" = true -a "$ARG_YES" = "-y" ]; then
     CODE &>/dev/null
   else

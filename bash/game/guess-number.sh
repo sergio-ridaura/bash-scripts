@@ -3,7 +3,7 @@
 SCRIPT_NAME="game_guess-number"
 SCRIPT_DESCRIPTION="Game you have to guess a number."
 SCRIPT_DESCRIPTION_ES="Juego que tienes de adivinar un número."
-SCRIPT_VERSION="24.05.08"
+SCRIPT_VERSION="24.05.10"
 
 # tools
 . "$(dirname "$0")/../bash-utilities.sh"
@@ -62,7 +62,7 @@ LOW_TEXT() {
 }
 
 # game
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
 
   number=$((RANDOM % 100 + 1))
 

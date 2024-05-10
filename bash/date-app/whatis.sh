@@ -3,14 +3,14 @@
 SCRIPT_NAME="date-app_watis"
 SCRIPT_DESCRIPTION="Get description of the date application."
 SCRIPT_DESCRIPTION_ES="Obtenga una descripción de la aplicación date."
-SCRIPT_VERSION="24.05.08"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html"
 
 # tools
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # whatis
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [ "$(echo "$LANG" | cut -d '_' -f 1)" == "es" ]; then
     echo "Imprima o configure la fecha y hora del sistema. Esta aplicación es parte de GNU coreutils."
   else

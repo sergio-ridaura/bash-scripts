@@ -4,7 +4,7 @@ if [[ "$0" == *"/bash-utilities.sh" ]]; then
   SCRIPT_NAME="bash-utilities"
   SCRIPT_DESCRIPTION="Tool to manage my collection of Bash scripts."
   SCRIPT_DESCRIPTION_ES="Herramienta para gestionar mi colección de scripts de Bash."
-  SCRIPT_VERSION="24.05.07"
+  SCRIPT_VERSION="24.05.10"
   SCRIPT_SEE="https://github.com/sergio-ridaura/bash-scripts"
 fi
 
@@ -14,7 +14,7 @@ DEV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SCRIPTS_PATH="${DEV_PATH}/bash"
 
 ARG_BASH_C=false
-ARG_BASH_I=false
+ARG_BASH_H=false
 ARG_BASH_M=false
 ARG_BASH_N=false
 ARG_BASH_Q=false
@@ -52,38 +52,38 @@ TEXT_DIM="\e[2m"
 # flags
 for arg in "$@"; do
   case "$arg" in
-  "-c")
+  "-c" | "--clear")
     ARG_BASH_C=true
     clear
     ;;
-  "-i")
-    ARG_BASH_I=true
+  "-h" | "--help")
+    ARG_BASH_H=true
     ;;
-  "-m")
+  "-m" | "--mute")
     ARG_BASH_M=true
     ;;
-  "-n")
+  "-n" | "--not")
     ARG_BASH_N=true
     ARG_YES="-n"
     ;;
-  "-q")
+  "-q" | "--quiet")
     ARG_BASH_Q=true
     ARG_BASH_M=true
     ;;
-  "-s")
+  "-s" | "--short")
     ARG_BASH_S=true
     ;;
-  "-u")
+  "-u" | "--sudo")
     ARG_BASH_U=true
     RUN_ROOT="sudo"
     ;;
-  "-v")
+  "-v" | "--version")
     ARG_BASH_V=true
     ARG_BASH_M=true
-    ARG_BASH_I=true
+    ARG_BASH_H=true
     echo "${SCRIPT_VERSION}"
     ;;
-  "-y")
+  "-y" | "--yes")
     ARG_BASH_Y=true
     ARG_YES="-y"
     ;;
@@ -141,14 +141,4 @@ ERROR_NOT_FOUND() {
   echo -e "${TEXT_DANGER}ERROR: \"${1}\" not found${TEXT_DEFAULT}" && exit 1
 }
 
-# clean arguments
-new_args=()
-for arg in "$@"; do
-  if [[ ! "${arg}" =~ ^-[a-zA-Z]$ ]]; then
-    new_args+=("${arg}")
-  fi
-done
-
-set -- "${new_args[@]}"
-
-unset "element" "arg" "new_args"
+unset "element" "arg"

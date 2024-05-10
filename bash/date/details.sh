@@ -3,14 +3,14 @@
 SCRIPT_NAME="date_details"
 SCRIPT_DESCRIPTION="Details of the date and time zone of the computer."
 SCRIPT_DESCRIPTION_ES="Detalles de la fecha y zona horaria del ordenador."
-SCRIPT_VERSION="24.05.08"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/"
 
 # tools
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # details
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [ "$ARG_BASH_S" == true ]; then
     DATA=$(timedatectl)
     echo "Local time: $(echo "$DATA" | grep "Local time" | awk '{print $4, $5, $6, $7, $8}')"

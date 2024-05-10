@@ -3,7 +3,7 @@
 SCRIPT_NAME="git-app_config_local"
 SCRIPT_DESCRIPTION="Git user local configuration."
 SCRIPT_DESCRIPTION_ES="Configuración local del usuario de Git."
-SCRIPT_VERSION="24.05.06"
+SCRIPT_VERSION="24.05.10"
 SCRIPT_SEE="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"
 SCRIPT_ARG=(user email)
 
@@ -20,7 +20,7 @@ email=$GIT_USER_EMAIL
 [ "$email" == "" ] && ERROR_ARGUMENT_MISSING 1
 
 # config
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   git config user.name $user
   git config user.email $email
 fi
