@@ -3,7 +3,7 @@
 SCRIPT_NAME="vscode-app_install"
 SCRIPT_DESCRIPTION="Visual Studio Code application installation."
 SCRIPT_DESCRIPTION_ES="Instalación de la aplicación Visual Studio Code."
-SCRIPT_VERSION="24.05.10"
+SCRIPT_VERSION="24.05.11"
 SCRIPT_SEE="https://code.visualstudio.com/"
 
 # tools
@@ -24,9 +24,5 @@ if [ "$ARG_BASH_H" != true ]; then
     CODE &>/dev/null
   else
     CODE
-  fi
-
-  if [ "$ARG_BASH_S" = true ]; then
-    echo "install Visual Studio Code"
   fi
 fi
