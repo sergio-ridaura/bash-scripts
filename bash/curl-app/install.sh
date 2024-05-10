@@ -3,7 +3,7 @@
 SCRIPT_NAME="curl-app_install"
 SCRIPT_DESCRIPTION="cURL application installation."
 SCRIPT_DESCRIPTION_ES="nstalación de la aplicación cURL."
-SCRIPT_VERSION="24.05.10"
+SCRIPT_VERSION="24.05.11"
 SCRIPT_SEE="https://curl.se/"
 
 # tools
@@ -20,9 +20,5 @@ if [ "$ARG_BASH_H" != true ]; then
     CODE &>/dev/null
   else
     CODE
-  fi
-
-  if [ "$ARG_BASH_S" = true ]; then
-    echo "install cURL"
   fi
 fi
