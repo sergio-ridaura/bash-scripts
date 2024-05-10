@@ -3,7 +3,7 @@
 SCRIPT_NAME="game_dice-even-or-odd"
 SCRIPT_DESCRIPTION="Game in which you have to guess if the sum of two dice results is even or odd."
 SCRIPT_DESCRIPTION_ES="Juego que tienes de adivinar si la suma de dos resultados de dados es par o impar."
-SCRIPT_VERSION="24.05.08"
+SCRIPT_VERSION="24.05.10"
 
 # tools
 . "$(dirname "$0")/../bash-utilities.sh"
@@ -62,7 +62,7 @@ FAILED_TEXT() {
 }
 
 # game
-if [ "$ARG_BASH_I" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
 
   die1=$(ROLL_DIE)
   die2=$(ROLL_DIE)

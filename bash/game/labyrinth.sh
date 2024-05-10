@@ -3,7 +3,7 @@
 SCRIPT_NAME="game_labyrinth"
 SCRIPT_DESCRIPTION="Maze game."
 SCRIPT_DESCRIPTION_ES="Juego del laberinto."
-SCRIPT_VERSION="24.05.08"
+SCRIPT_VERSION="24.05.10"
 
 # tools
 . "$(dirname "$0")/../bash-utilities.sh"
@@ -51,42 +51,44 @@ goalX=23
 goalY=1
 
 # game
-while true; do
-  INITIAL_TEXT
-  for ((y = 0; y < ${#maze[@]}; y++)); do
-    for ((x = 0; x < ${#maze[$y]}; x++)); do
-      if [[ $x -eq $posX && $y -eq $posY ]]; then
-        echo -en "${TEXT_YELLOW}@${TEXT_DEFAULT}"
-      elif [[ $x -eq $goalX && $y -eq $goalY ]]; then
-        echo -en "${TEXT_RED}X${TEXT_DEFAULT}"
-      else
-        echo -en "${maze[$y]:$x:1}"
-      fi
+if [ "$ARG_BASH_H" != true ]; then
+  while true; do
+    INITIAL_TEXT
+    for ((y = 0; y < ${#maze[@]}; y++)); do
+      for ((x = 0; x < ${#maze[$y]}; x++)); do
+        if [[ $x -eq $posX && $y -eq $posY ]]; then
+          echo -en "${TEXT_YELLOW}@${TEXT_DEFAULT}"
+        elif [[ $x -eq $goalX && $y -eq $goalY ]]; then
+          echo -en "${TEXT_RED}X${TEXT_DEFAULT}"
+        else
+          echo -en "${maze[$y]:$x:1}"
+        fi
+      done
+      echo
     done
-    echo
+
+    if [[ $posX -eq $goalX && $posY -eq $goalY ]]; then
+      SUCCESS_TEXT
+      exit
+    fi
+
+    read -rsn1 move
+
+    case $move in
+    w)
+      [[ "${maze[$((posY - 1))]:posX:1}" != "#" ]] && posY=$((posY - 1))
+      ;;
+    s)
+      [[ "${maze[$((posY + 1))]:posX:1}" != "#" ]] && posY=$((posY + 1))
+      ;;
+    a)
+      [[ "${maze[posY]:$((posX - 1)):1}" != "#" ]] && posX=$((posX - 1))
+      ;;
+    d)
+      [[ "${maze[posY]:$((posX + 1)):1}" != "#" ]] && posX=$((posX + 1))
+      ;;
+    esac
+
+    clear
   done
-
-  if [[ $posX -eq $goalX && $posY -eq $goalY ]]; then
-    SUCCESS_TEXT
-    exit
-  fi
-
-  read -rsn1 move
-
-  case $move in
-  w)
-    [[ "${maze[$((posY - 1))]:posX:1}" != "#" ]] && posY=$((posY - 1))
-    ;;
-  s)
-    [[ "${maze[$((posY + 1))]:posX:1}" != "#" ]] && posY=$((posY + 1))
-    ;;
-  a)
-    [[ "${maze[posY]:$((posX - 1)):1}" != "#" ]] && posX=$((posX - 1))
-    ;;
-  d)
-    [[ "${maze[posY]:$((posX + 1)):1}" != "#" ]] && posX=$((posX + 1))
-    ;;
-  esac
-
-  clear
-done
+fi
