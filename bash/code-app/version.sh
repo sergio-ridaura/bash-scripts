@@ -1,12 +1,12 @@
 #!/bin/bash
 
-LAYOUT_NAME="wget"
-LAYOUT_APP="Wget"
+LAYOUT_NAME="code"
+LAYOUT_APP="Visual Studio Code"
 LAYOUT_VERSION="24.05.12"
-LAYOUT_SEE="https://www.gnu.org/software/wget/"
+LAYOUT_SEE="https://code.visualstudio.com/"
 
 LAYOUT_CODE() {
-  wget --version
+  code --version
 }
 
 LAYOUT_CODE_SHORT() {
