@@ -1,19 +1,8 @@
 #!/bin/bash
 
-SCRIPT_NAME="chrome-app_info"
-SCRIPT_DESCRIPTION="Google Chrome info command."
-SCRIPT_DESCRIPTION_ES="Comando de información de Google Chrome."
-SCRIPT_VERSION="24.05.10"
-SCRIPT_SEE="https://www.google.com/chrome/"
+LAYOUT_NAME="google-chrome"
+LAYOUT_APP="Google Chrome"
+LAYOUT_VERSION="24.05.12"
+LAYOUT_SEE="https://www.google.com/chrome/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
-
-# info
-if [ "$ARG_BASH_H" != true ]; then
-  if command -v google-chrome &>/dev/null; then
-    info google-chrome
-  else
-    ERROR_NOT_FOUND "Google Chrome"
-  fi
-fi
+. "$(dirname "$0")/../template/info.sh"

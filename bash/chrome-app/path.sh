@@ -1,19 +1,12 @@
 #!/bin/bash
 
-SCRIPT_NAME="chrome-app_path"
-SCRIPT_DESCRIPTION="Get Google Chrome application path."
-SCRIPT_DESCRIPTION_ES="Obtenga la ruta de la aplicación Google Chrome."
-SCRIPT_VERSION="24.05.10"
-SCRIPT_SEE="https://www.google.com/chrome/"
+LAYOUT_NAME="google-chrome"
+LAYOUT_APP="Google Chrome"
+LAYOUT_VERSION="24.05.12"
+LAYOUT_SEE="https://www.google.com/chrome/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
+LAYOUT_CODE() {
+  which google-chrome
+}
 
-# path
-if [ "$ARG_BASH_H" != true ]; then
-  if command -v google-chrome &>/dev/null; then
-    which google-chrome
-  else
-    ERROR_NOT_FOUND "Google Chrome"
-  fi
-fi
+. "$(dirname "$0")/../template/path.sh"
