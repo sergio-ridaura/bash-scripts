@@ -4,13 +4,13 @@ if [[ "$0" == *"/bash-utilities.sh" ]]; then
   SCRIPT_NAME="bash-utilities"
   SCRIPT_DESCRIPTION="Tool to manage my collection of Bash scripts."
   SCRIPT_DESCRIPTION_ES="Herramienta para gestionar mi colección de scripts de Bash."
-  SCRIPT_VERSION="24.05.10"
+  SCRIPT_VERSION="24.05.13"
   SCRIPT_SEE="https://github.com/sergio-ridaura/bash-scripts"
 fi
 
 # global variables
 CURRENT_PATH="$(pwd)"
-DEV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+[ -z "$DEV_PATH" ] && DEV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SCRIPTS_PATH="${DEV_PATH}/bash"
 
 ARG_BASH_C=false
@@ -91,10 +91,10 @@ for arg in "$@"; do
 done
 
 # environment variables
-if [ -e "${DEV_PATH}/.env.bash" ]; then
-  . "${DEV_PATH}/.env.bash"
+if [ -e "$DEV_PATH/.env.bash" ]; then
+  . "$DEV_PATH/.env.bash"
 else
-  . "${DEV_PATH}/.env.bash.default"
+  . "$DEV_PATH/.env.bash.default"
 fi
 
 # are you sudo?
