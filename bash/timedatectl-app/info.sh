@@ -2,7 +2,8 @@
 
 LAYOUT_NAME="timedatectl"
 LAYOUT_APP="timedatectl"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://systemd.io"
 
+# template
 . "$(dirname "$0")/../template/info.sh"

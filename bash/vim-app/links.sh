@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="vim"
 LAYOUT_APP="Vim"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="http://www.vim.org/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE() {
 - Stack Overflow      https://stackoverflow.com/questions/tagged/vim"
 }
 
+# template
 . "$(dirname "$0")/../template/links.sh"

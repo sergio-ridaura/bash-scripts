@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="zip"
 LAYOUT_APP="Zip"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://en.wikipedia.org/wiki/Zip_(file_format)"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "Zip es una utilidad de línea de comandos que se utiliza para comprimir archivos y directorios en un archivo ZIP. El formato ZIP se usa ampliamente para empaquetar y comprimir varios archivos y directorios en un solo archivo."
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"

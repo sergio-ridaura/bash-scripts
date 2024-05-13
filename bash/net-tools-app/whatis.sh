@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="net-tools"
 LAYOUT_APP="Net-tools"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://sourceforge.net/projects/net-tools/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "Net-tools es una utilidad de línea de comandos que proporciona funciones relacionadas con la red en sistemas operativos basados ​​en Linux y UNIX".
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"

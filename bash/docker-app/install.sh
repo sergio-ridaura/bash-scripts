@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="docker"
 LAYOUT_APP="Docker"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://docs.docker.com/"
 
 LAYOUT_CODE() {
@@ -16,4 +16,5 @@ LAYOUT_CODE() {
   $IS_ROOT chmod o+rw /var/run/docker.sock
 }
 
+# template
 . "$(dirname "$0")/../template/install.sh"

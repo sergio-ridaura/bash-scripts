@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="vlc"
 LAYOUT_APP="VLC"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://www.videolan.org/vlc/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "VLC es un reproductor multimedia multiplataforma de código abierto. El nombre completo de VLC es VLC media player y está desarrollado por la organización sin fines de lucro VideoLAN".
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"

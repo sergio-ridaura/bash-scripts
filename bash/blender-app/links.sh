@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="blender"
 LAYOUT_APP="Blender"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://www.blender.org/"
 
 LAYOUT_CODE() {
@@ -14,4 +14,5 @@ LAYOUT_CODE() {
 - Stack Overflow      https://stackoverflow.com/questions/tagged/blender"
 }
 
+# template
 . "$(dirname "$0")/../template/links.sh"
