@@ -1,19 +1,12 @@
 #!/bin/bash
 
-SCRIPT_NAME="date-app_path"
-SCRIPT_DESCRIPTION="Get date application path."
-SCRIPT_DESCRIPTION_ES="Obtenga la ruta de la aplicación date."
-SCRIPT_VERSION="24.05.10"
-SCRIPT_SEE="https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html"
+LAYOUT_NAME="date"
+LAYOUT_APP="date"
+LAYOUT_VERSION="24.05.12"
+LAYOUT_SEE="https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
+LAYOUT_CODE() {
+  which date
+}
 
-# path
-if [ "$ARG_BASH_H" != true ]; then
-  if command -v date &>/dev/null; then
-    which date
-  else
-    ERROR_NOT_FOUND "date"
-  fi
-fi
+. "$(dirname "$0")/../template/path.sh"

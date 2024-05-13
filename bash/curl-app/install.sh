@@ -1,24 +1,12 @@
 #!/bin/bash
 
-SCRIPT_NAME="curl-app_install"
-SCRIPT_DESCRIPTION="cURL application installation."
-SCRIPT_DESCRIPTION_ES="nstalación de la aplicación cURL."
-SCRIPT_VERSION="24.05.11"
-SCRIPT_SEE="https://curl.se/"
+LAYOUT_NAME="curl"
+LAYOUT_APP="cURL"
+LAYOUT_VERSION="24.05.12"
+LAYOUT_SEE="https://curl.se/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
-
-# code
-CODE() {
+LAYOUT_CODE() {
   $IS_ROOT apt install $ARG_YES curl
 }
 
-# install
-if [ "$ARG_BASH_H" != true ]; then
-  if [ "$ARG_BASH_M" = true -a "$ARG_YES" = "-y" ]; then
-    CODE &>/dev/null
-  else
-    CODE
-  fi
-fi
+. "$(dirname "$0")/../template/install.sh"

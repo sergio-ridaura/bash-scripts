@@ -1,19 +1,12 @@
 #!/bin/bash
 
-SCRIPT_NAME="curl-app_path"
-SCRIPT_DESCRIPTION="Get cURL application path."
-SCRIPT_DESCRIPTION_ES="Obtenga la ruta de la aplicación cURL."
-SCRIPT_VERSION="24.05.10"
-SCRIPT_SEE="https://curl.se/"
+LAYOUT_NAME="curl"
+LAYOUT_APP="cURL"
+LAYOUT_VERSION="24.05.12"
+LAYOUT_SEE="https://curl.se/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
+LAYOUT_CODE() {
+  which curl
+}
 
-# path
-if [ "$ARG_BASH_H" != true ]; then
-  if command -v curl &>/dev/null; then
-    which curl
-  else
-    ERROR_NOT_FOUND "cURL"
-  fi
-fi
+. "$(dirname "$0")/../template/path.sh"

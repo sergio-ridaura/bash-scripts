@@ -1,19 +1,16 @@
 #!/bin/bash
 
-SCRIPT_NAME="curl-app_watis"
-SCRIPT_DESCRIPTION="Get description of the cURL application."
-SCRIPT_DESCRIPTION_ES="Obtenga una descripción de la aplicación cURL."
-SCRIPT_VERSION="24.05.10"
-SCRIPT_SEE="https://curl.se/"
+LAYOUT_NAME="curl"
+LAYOUT_APP="cURL"
+LAYOUT_VERSION="24.05.12"
+LAYOUT_SEE="https://curl.se/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
+LAYOUT_CODE() {
+  echo "cURL is a command line tool used to make applications and receive answers from or to servers using several network protocols, such as HTTP, HTTPS, FTP, SMTP, among others."
+}
 
-# whatis
-if [ "$ARG_BASH_H" != true ]; then
-  if [ "$(echo "$LANG" | cut -d '_' -f 1)" == "es" ]; then
-    echo "cURL is a command line tool used to make applications and receive answers from or to servers using several network protocols, such as HTTP, HTTPS, FTP, SMTP, among others."
-  else
-    echo "cURL es una herramienta de línea de comandos utilizada para crear aplicaciones y recibir respuestas desde o hacia servidores utilizando varios protocolos de red, como HTTP, HTTPS, FTP, SMTP, entre otros."
-  fi
-fi
+LAYOUT_CODE_ES() {
+  echo "cURL es una herramienta de línea de comandos utilizada para crear aplicaciones y recibir respuestas desde o hacia servidores utilizando varios protocolos de red, como HTTP, HTTPS, FTP, SMTP, entre otros."
+}
+
+. "$(dirname "$0")/../template/whatis.sh"
