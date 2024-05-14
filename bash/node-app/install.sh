@@ -1,12 +1,12 @@
-# ---
+#!/bin/bash
+
 SCRIPT_NAME="node-app_install"
 SCRIPT_DESCRIPTION="Node.js installation."
-SCRIPT_VERSION="24.3.30"
+SCRIPT_VERSION="24.05.14"
 SCRIPT_SEE="https://nodejs.org/en/download"
-# ---
 
 # tools
-. "$(dirname "$0")/../../scripts/tools.sh"
+. "$(dirname "$0")/../bash-utilities.sh"
 
 # install
 if [ "$ARG_BASH_O" != true ]; then

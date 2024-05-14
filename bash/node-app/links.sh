@@ -1,12 +1,12 @@
-# ---
+#!/bin/bash
+
 SCRIPT_NAME="node-app_links"
 SCRIPT_DESCRIPTION="List of help links for Node.js application."
-SCRIPT_VERSION="24.3.30"
+SCRIPT_VERSION="24.05.14"
 SCRIPT_SEE="http://node.org/"
-# ---
 
 # tools
-. "$(dirname "$0")/../../scripts/tools.sh"
+. "$(dirname "$0")/../bash-utilities.sh"
 
 # links
 if [ "$ARG_BASH_O" != true ]; then

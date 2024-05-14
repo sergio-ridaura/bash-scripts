@@ -1,12 +1,12 @@
-# ---
+#!/bin/bash
+
 SCRIPT_NAME="node-app_path"
 SCRIPT_DESCRIPTION="Get Node.js application path."
-SCRIPT_VERSION="24.3.30"
+SCRIPT_VERSION="24.05.14"
 SCRIPT_SEE="http://node.org/"
-# ---
 
 # tools
-. "$(dirname "$0")/../../scripts/tools.sh"
+. "$(dirname "$0")/../bash-utilities.sh"
 
 # path
 if [ "$ARG_BASH_O" != true ]; then

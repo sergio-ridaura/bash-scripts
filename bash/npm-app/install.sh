@@ -1,12 +1,12 @@
-# ---
+#!/bin/bash
+
 SCRIPT_NAME="npm-app_install"
 SCRIPT_DESCRIPTION="Npm application installation."
-SCRIPT_VERSION="24.3.30"
+SCRIPT_VERSION="24.05.14"
 SCRIPT_SEE="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm"
-# ---
 
 # tools
-. "$(dirname "$0")/../../scripts/tools.sh"
+. "$(dirname "$0")/../bash-utilities.sh"
 
 # install
 if [ "$ARG_BASH_O" != true ]; then

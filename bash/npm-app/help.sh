@@ -1,12 +1,12 @@
-# ---
+#!/bin/bash
+
 SCRIPT_NAME="npm-app_help"
 SCRIPT_DESCRIPTION="Npm help command."
-SCRIPT_VERSION="24.3.30"
+SCRIPT_VERSION="24.05.14"
 SCRIPT_SEE="https://docs.npmjs.com/"
-# ---
 
 # tools
-. "$(dirname "$0")/../../scripts/tools.sh"
+. "$(dirname "$0")/../bash-utilities.sh"
 
 # help
 if [ "$ARG_BASH_O" != true ]; then
