@@ -9,6 +9,6 @@ SCRIPT_SEE="https://phoenixnap.com/kb/linux-hostname-command"
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # version
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   hostname
 fi

@@ -9,6 +9,6 @@ SCRIPT_SEE="https://linuxize.com/post/last-command-in-linux/"
 . "$(dirname "$0")/../../bash-utilities.sh"
 
 # last
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   last
 fi

@@ -9,7 +9,7 @@ SCRIPT_SEE="https://git-scm.com/docs/git-init"
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # init
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   results=$(tail -n 1 <<<"$(git init 2>&1)")
   if [ "$ARG_BASH_S" = true ]; then
     if [[ ! "$results" =~ "Inicializado" ]]; then

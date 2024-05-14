@@ -2,6 +2,7 @@
 
 SCRIPT_NAME="node-app_update"
 SCRIPT_DESCRIPTION="Update Node.js with npm and n."
+SCRIPT_DESCRIPTION_ES="Actualice Node.js con npm y n."
 SCRIPT_VERSION="24.05.14"
 SCRIPT_SEE="https://www.npmjs.com/package/n"
 
@@ -9,7 +10,7 @@ SCRIPT_SEE="https://www.npmjs.com/package/n"
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # update
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT npm install -g n
   $IS_ROOT n lts
 fi

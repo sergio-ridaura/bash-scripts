@@ -9,6 +9,6 @@ SCRIPT_SEE="https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # edit
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   echo "$1" | tr '[:lower:]' '[:upper:]'
 fi

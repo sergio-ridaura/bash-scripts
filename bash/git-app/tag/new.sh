@@ -15,6 +15,6 @@ SCRIPT_ARG=(tag)
 tag="$1"
 
 # new
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   git tag "$tag"
 fi

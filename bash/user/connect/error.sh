@@ -9,6 +9,6 @@ SCRIPT_SEE="https://www.computerhope.com/unix/last.htm"
 . "$(dirname "$0")/../../bash-utilities.sh"
 
 # whatis
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT lastb
 fi

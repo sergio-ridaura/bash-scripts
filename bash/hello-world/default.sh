@@ -8,6 +8,6 @@ SCRIPT_VERSION="24.05.14"
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # echo
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   echo "Hello World! $1"
 fi

@@ -1,22 +1,17 @@
 #!/bin/bash
 
-SCRIPT_NAME="node-app_version"
-SCRIPT_DESCRIPTION="Get Node.js application version."
-SCRIPT_VERSION="24.05.14"
-SCRIPT_SEE="http://node.org/"
+LAYOUT_NAME="node"
+LAYOUT_APP="Node.js"
+LAYOUT_VERSION="24.05.14"
+LAYOUT_SEE="https://node.org/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
+LAYOUT_CODE() {
+  node --version
+}
 
-# version
-if [ "$ARG_BASH_O" != true ]; then
-  if command -v node &>/dev/null; then
-    if [ "$ARG_BASH_S" == true ]; then
-      echo $(node --version 2>&1 | grep -oP 'v\K\d+\.\d+\.\d+')
-    else
-      node --version
-    fi
-  else
-    echo -e "${TEXT_DANGER}ERROR: Node.js is not installed${TEXT_DEFAULT}"
-  fi
-fi
+LAYOUT_CODE_SHORT() {
+  echo $(LAYOUT_CODE 2>&1 | grep -oP 'v\K\d+\.\d+\.\d+')
+}
+
+# template
+. "$(dirname "$0")/../template/version.sh"

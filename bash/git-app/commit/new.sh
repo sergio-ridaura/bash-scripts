@@ -15,7 +15,7 @@ text="$1"
 [ $# -eq 0 ] && text=$APP_DATE_CREATE
 
 # new
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   results=$(git commit -m "$text" 2>&1)
   if [ "$ARG_BASH_S" = true ]; then
     if [[ ! "$results" =~ "files changed" ]]; then

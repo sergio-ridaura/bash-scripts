@@ -14,7 +14,7 @@ file="$1"
 [ $# -eq 0 ] && file="."
 
 # add
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   echo -en "$TEXT_DANGER"
   if git add "$file"; then
     echo -en "$TEXT_DEFAULT"

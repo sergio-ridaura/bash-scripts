@@ -14,6 +14,6 @@ user=$USER
 [ $# -ge 1 ] && user="$1"
 
 # last
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   last $user
 fi

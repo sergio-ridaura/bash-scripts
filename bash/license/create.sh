@@ -17,7 +17,7 @@ user="$3"
 short=$ARG_BASH_S
 
 # create
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   source $SCRIPTS_PATH/file/copy.sh "$FILES_PATH/license/$type/LICENSE" "$path" -m
   source $SCRIPTS_PATH/file/text/edit.sh "$path" "<USER>" "$user" -m
   source $SCRIPTS_PATH/file/text/edit.sh "$path" "<USER_CAPITAL>" "$(source $SCRIPTS_PATH/text/capital.sh "$user" -m)" -m

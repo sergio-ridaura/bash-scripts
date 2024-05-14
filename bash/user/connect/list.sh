@@ -9,6 +9,6 @@ SCRIPT_SEE="https://linuxhandbook.com/linux-list-users/"
 . "$(dirname "$0")/../../bash-utilities.sh"
 
 # list
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   users
 fi

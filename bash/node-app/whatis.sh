@@ -1,14 +1,17 @@
 #!/bin/bash
 
-SCRIPT_NAME="node-app_watis"
-SCRIPT_DESCRIPTION="Get description of the Node.js application."
-SCRIPT_VERSION="24.05.14"
-SCRIPT_SEE="http://www.node.org/"
+LAYOUT_NAME="node"
+LAYOUT_APP="Node.js"
+LAYOUT_VERSION="24.05.14"
+LAYOUT_SEE="https://node.org/"
 
-# tools
-. "$(dirname "$0")/../bash-utilities.sh"
-
-# whatis
-if [ "$ARG_BASH_O" != true ]; then
+LAYOUT_CODE() {
   echo "Node.js is a JavaScript runtime environment that enables running JavaScript code outside of a browser. It is commonly used for server-side application development."
-fi
+}
+
+LAYOUT_CODE_ES() {
+  echo "Node.js es un entorno de ejecución de JavaScript que permite ejecutar código JavaScript fuera de un navegador. Se usa comúnmente para el desarrollo de aplicaciones del lado del servidor".
+}
+
+# template
+. "$(dirname "$0")/../template/whatis.sh"

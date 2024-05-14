@@ -9,6 +9,6 @@ SCRIPT_SEE="https://linuxize.com/post/how-to-list-groups-in-linux/"
 . "$(dirname "$0")/../../bash-utilities.sh"
 
 # remove
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   cat /etc/passwd
 fi

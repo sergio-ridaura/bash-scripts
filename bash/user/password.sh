@@ -15,6 +15,6 @@ SCRIPT_ARG=(user)
 user=$1
 
 # password
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT passwd $user
 fi

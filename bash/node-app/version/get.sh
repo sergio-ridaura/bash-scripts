@@ -9,6 +9,6 @@ SCRIPT_SEE="https://nodejs.org/"
 . "$(dirname "$0")/../../sh-utilities.sh"
 
 # update
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   node --version
 fi

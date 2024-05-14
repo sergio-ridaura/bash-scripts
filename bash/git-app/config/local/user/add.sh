@@ -18,7 +18,7 @@ email=$GIT_USER_EMAIL
 [ "$email" == "" ] && echo -e "${TEXT_DANGER}ERROR: arguments are missing${TEXT_DEFAULT}" && exit 1
 
 # configuration
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   git config user.name $user
   git config user.email $email
 fi

@@ -9,7 +9,7 @@ SCRIPT_SEE="https://stackoverflow.com/questions/2752346/listing-time-every-secon
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # clock
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   while [ 1 ]; do
     echo -en "$(date +%T)\r"
     sleep 1

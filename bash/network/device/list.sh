@@ -9,6 +9,6 @@ SCRIPT_SEE="https://linuxize.com/post/fdisk-command-in-linux/"
 . "$(dirname "$0")/../../bash-utilities.sh"
 
 # list
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT nmap -sn 192.168.1.0/24
 fi

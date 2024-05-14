@@ -17,6 +17,6 @@ user=$1
 [ $# -ge 2 ] && [ "$2" == "true" ] && folder=" -m"
 
 # new
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT useradd $folder $user
 fi

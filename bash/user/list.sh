@@ -9,6 +9,6 @@ SCRIPT_SEE="https://phoenixnap.com/kb/whoami-linux"
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # list
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   whoami
 fi

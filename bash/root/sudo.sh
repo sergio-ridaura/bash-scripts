@@ -9,7 +9,7 @@ SCRIPT_SEE="http://gnu.org/"
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # sudo
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   if [[ "$(whoami)" != "root" && "$EUID" -ne 0 ]]; then
     echo "sudo"
   fi

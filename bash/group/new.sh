@@ -15,6 +15,6 @@ SCRIPT_ARG=(name)
 name="$1"
 
 # remove
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT groupdel $name
 fi

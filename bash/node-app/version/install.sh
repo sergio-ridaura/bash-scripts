@@ -14,7 +14,7 @@ version="lts"
 [ $# -ge 1 ] && version="$1"
 
 # install
-if [ "$ARG_BASH_O" != true ]; then
+if [ "$ARG_BASH_H" != true ]; then
   $IS_ROOT npm install -g n
   $IS_ROOT n $version
 fi
