@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="google-chrome"
 LAYOUT_APP="Google Chrome"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://www.google.com/chrome/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "Google Chrome es un navegador web desarrollado por Google. Es uno de los navegadores más populares y utilizados a nivel mundial."
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"

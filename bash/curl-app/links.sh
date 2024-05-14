@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="curl"
 LAYOUT_APP="cURL"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://curl.se/"
 
 LAYOUT_CODE() {
@@ -15,4 +15,5 @@ LAYOUT_CODE() {
 - Linuxize            https://linuxize.com/tags/curl/"
 }
 
+# template
 . "$(dirname "$0")/../template/links.sh"

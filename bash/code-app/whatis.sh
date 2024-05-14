@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="code"
 LAYOUT_APP="Visual Studio Code"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://code.visualstudio.com/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "Visual Studio Code es un entorno de desarrollo integrado (IDE) que se utiliza principalmente para programar y editar código. Está desarrollado por Microsoft y es una herramienta muy popular entre los desarrolladores de software debido a su flexibilidad, eficiencia y amplia gama de características".
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"

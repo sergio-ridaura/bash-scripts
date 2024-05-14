@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="tmux"
 LAYOUT_APP="Tmux"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="https://tmux.github.io/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "Tmux es una herramienta de línea de comandos que permite a los usuarios interactuar con múltiples sesiones y ventanas en una sola terminal."
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"

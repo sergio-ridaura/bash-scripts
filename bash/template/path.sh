@@ -15,6 +15,12 @@ fi
 DEV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 . "$DEV_PATH/bash/bash-utilities.sh"
 
+if ! declare -F LAYOUT_CODE >/dev/null; then
+  LAYOUT_CODE() {
+    which $LAYOUT_NAME
+  }
+fi
+
 # path
 if [ -n "$LAYOUT_NAME" ] && [ "$ARG_BASH_H" != true ]; then
   if command -v $LAYOUT_NAME &>/dev/null; then

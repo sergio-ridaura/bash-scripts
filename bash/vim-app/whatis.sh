@@ -2,7 +2,7 @@
 
 LAYOUT_NAME="vim"
 LAYOUT_APP="Vim"
-LAYOUT_VERSION="24.05.12"
+LAYOUT_VERSION="24.05.13"
 LAYOUT_SEE="http://www.vim.org/"
 
 LAYOUT_CODE() {
@@ -13,4 +13,5 @@ LAYOUT_CODE_ES() {
   echo "Vim es un editor de texto de código abierto y altamente configurable. Su nombre es un acrónimo de Vi mejorado, en referencia a su relación con el editor de texto Vi, que se desarrolló originalmente en la década de 1970".
 }
 
+# template
 . "$(dirname "$0")/../template/whatis.sh"
