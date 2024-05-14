@@ -14,4 +14,4 @@ LAYOUT_CODE() {
 }
 
 # template
-. "$(dirname "$0")/../template/help.sh"
+. "$(dirname "$0")/../template/links.sh"

@@ -14,4 +14,4 @@ LAYOUT_CODE_SHORT() {
 }
 
 # template
-. "$(dirname "$0")/../template/help.sh"
+. "$(dirname "$0")/../template/version.sh"

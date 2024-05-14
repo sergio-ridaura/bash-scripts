@@ -14,4 +14,4 @@ LAYOUT_CODE_ES() {
 }
 
 # template
-. "$(dirname "$0")/../template/help.sh"
+. "$(dirname "$0")/../template/whatis.sh"
