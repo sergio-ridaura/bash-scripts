@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SCRIPT_NAME="text_capital"
-SCRIPT_DESCRIPTION="Convert text to uppercase."
-SCRIPT_DESCRIPTION_ES="Convertir el texto en mayúsculas."
+SCRIPT_NAME="text_camelcase"
+SCRIPT_DESCRIPTION="Convert text to CamelCase."
+SCRIPT_DESCRIPTION_ES="Convertir el texto a CamelCase."
 SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/"
 SCRIPT_ARG=(text)
@@ -16,5 +16,5 @@ SCRIPT_ARG=(text)
 
 # edit
 if [ "$ARG_BASH_H" != true ]; then
-  echo "$text" | tr '[:lower:]' '[:upper:]'
+  echo "$text" | sed -e 's/[^A-Za-z0-9]/ /g' -e 's/\([a-z]\)\([A-Z]\)/\1 \2/g' -e 's/^[[:lower:]]/\U&/' -e 's/ \([[:lower:]]\)/ \U\1/g' -e 's/ //g'
 fi

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SCRIPT_NAME="text_capital"
-SCRIPT_DESCRIPTION="Convert text to uppercase."
-SCRIPT_DESCRIPTION_ES="Convertir el texto en mayúsculas."
+SCRIPT_NAME="text_capitalize"
+SCRIPT_DESCRIPTION="Capitalize the first letter of text."
+SCRIPT_DESCRIPTION_ES="Capitalizar la primera letra del texto."
 SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/"
 SCRIPT_ARG=(text)
@@ -14,7 +14,7 @@ SCRIPT_ARG=(text)
 [ $# -ge 1 ] && text="$1"
 [ "$text" == "" ] && ERROR_ARGUMENT_MISSING 0
 
-# edit
+# remove
 if [ "$ARG_BASH_H" != true ]; then
-  echo "$text" | tr '[:lower:]' '[:upper:]'
+  echo "$text" | sed 's/.*/\L&/; s/[a-z]*/\u&/'
 fi
