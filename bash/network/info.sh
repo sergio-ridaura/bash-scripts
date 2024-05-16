@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="network_info"
 SCRIPT_DESCRIPTION="Information about the networks used by the computer."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Información sobre las redes utilizadas por la computadora."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://linuxize.com/post/fdisk-command-in-linux/"
 
 # tools

@@ -1,13 +1,9 @@
 #!/bin/bash
 
-LAYOUT_NAME="net-tools"
-LAYOUT_APP="Net-tools"
-LAYOUT_VERSION="24.05.13"
+LAYOUT_NAME="ifconfig"
+LAYOUT_APP="ifconfig"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://sourceforge.net/projects/net-tools/"
-
-LAYOUT_CODE() {
-  which net-tools
-}
 
 # template
 . "$(dirname "$0")/../template/path.sh"

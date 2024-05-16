@@ -2,12 +2,8 @@
 
 LAYOUT_NAME="node"
 LAYOUT_APP="Node.js"
-LAYOUT_VERSION="24.05.14"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://node.org/"
-
-LAYOUT_CODE() {
-  node --version
-}
 
 LAYOUT_CODE_SHORT() {
   echo $(LAYOUT_CODE 2>&1 | grep -oP 'v\K\d+\.\d+\.\d+')

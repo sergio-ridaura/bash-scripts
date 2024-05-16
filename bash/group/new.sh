@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="user_new"
 SCRIPT_DESCRIPTION="New user group in the system."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Nuevo grupo de usuarios en el sistema.."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://www.techrepublic.com/article/how-to-create-users-and-groups-in-linux-from-the-command-line/"
 SCRIPT_ARG=(name)
 
@@ -10,9 +11,8 @@ SCRIPT_ARG=(name)
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # arguments
-[ $# -eq 0 ] && echo -e "${TEXT_DANGER}ERROR: arguments are missing${TEXT_DEFAULT}" && exit 1
-
-name="$1"
+[ $# -ge 1 ] && name="$1"
+[ "$name" == "" ] && ERROR_ARGUMENT_MISSING 0
 
 # remove
 if [ "$ARG_BASH_H" != true ]; then

@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="user_list_get"
 SCRIPT_DESCRIPTION="List of system groups."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Lista de grupos de sistemas."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://linuxize.com/post/how-to-list-groups-in-linux/"
 
 # tools
