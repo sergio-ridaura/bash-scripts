@@ -2,15 +2,11 @@
 
 LAYOUT_NAME="timedatectl"
 LAYOUT_APP="timedatectl"
-LAYOUT_VERSION="24.05.13"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://systemd.io"
 
-LAYOUT_CODE() {
-  timedatectl --version
-}
-
 LAYOUT_CODE_SHORT() {
-  echo $(LAYOUT_CODE 2>&1 | grep -oP 'Blender \K\d+\.\d+\.\d+')
+  echo $(LAYOUT_CODE 2>&1 | grep -oP '\(\K\d+\.\d+')
 }
 
 # template

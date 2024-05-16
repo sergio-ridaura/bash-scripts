@@ -2,15 +2,15 @@
 
 LAYOUT_NAME="nginx"
 LAYOUT_APP="Nginx"
-LAYOUT_VERSION="24.05.14"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://nginx.org/"
 
 LAYOUT_CODE() {
-  nginx --version
+  nginx -v
 }
 
 LAYOUT_CODE_SHORT() {
-  echo $(LAYOUT_CODE 2>&1 | grep -oP 'Nginx \K\d+\.\d+\.\d+')
+  echo $(LAYOUT_CODE 2>&1 | grep -oP 'nginx/\K\d+\.\d+\.\d+')
 }
 
 # template

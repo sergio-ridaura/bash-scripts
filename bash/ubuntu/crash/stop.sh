@@ -11,7 +11,7 @@ SCRIPT_SEE="https://askubuntu.com/questions/93457/how-do-i-enable-or-disable-app
 
 # stop
 if [ "$ARG_BASH_H" != true ]; then
-  bash $SCRIPTS_PATH/ubuntu/crash/clean.sh -m
+  "${SCRIPTS_PATH}/ubuntu/crash/clean.sh" "-m"
   $IS_ROOT cp /etc/default/apport /etc/default/apport.old
   $IS_ROOT sed -i 's/enabled=1/enabled=0/g' /etc/default/apport
 fi

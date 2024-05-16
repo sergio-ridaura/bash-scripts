@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="root_sudo"
 SCRIPT_DESCRIPTION="If you are root, use sudo."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Si eres root, usa sudo."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="http://gnu.org/"
 
 # tools

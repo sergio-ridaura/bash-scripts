@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="git-app_commit_new"
 SCRIPT_DESCRIPTION="New a commit in Git."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Nuevo commit en Git."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://git-scm.com/docs/git-commit"
 SCRIPT_ARG=(text)
 
@@ -10,19 +11,10 @@ SCRIPT_ARG=(text)
 . "$(dirname "$0")/../../bash-utilities.sh"
 
 # arguments
-text="$1"
-
-[ $# -eq 0 ] && text=$APP_DATE_CREATE
+[ $# -ge 1 ] && text="$1"
+[ "$text" == "" ] && ERROR_ARGUMENT_MISSING 0
 
 # new
 if [ "$ARG_BASH_H" != true ]; then
-  results=$(git commit -m "$text" 2>&1)
-  if [ "$ARG_BASH_S" = true ]; then
-    if [[ ! "$results" =~ "files changed" ]]; then
-      echo -en "$TEXT_DANGER"
-    fi
-    echo -e "commit $text"
-  fi
+  git commit -m "$text"
 fi
-
-echo -en "$TEXT_DEFAULT"

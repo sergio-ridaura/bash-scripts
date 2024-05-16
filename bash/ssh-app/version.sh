@@ -2,11 +2,11 @@
 
 LAYOUT_NAME="ssh"
 LAYOUT_APP="SSH"
-LAYOUT_VERSION="24.05.13"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://www.openssh.com/"
 
 LAYOUT_CODE() {
-  curl --version
+  ssh -V
 }
 
 LAYOUT_CODE_SHORT() {

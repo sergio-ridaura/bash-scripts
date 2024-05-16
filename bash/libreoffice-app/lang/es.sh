@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="libreoffice-app-lang_es"
 SCRIPT_DESCRIPTION="LibreOffice in Spanish."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="LibreOffice en español."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://libreoffice.org/"
 
 # tools

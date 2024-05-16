@@ -4,7 +4,7 @@ if [[ "$0" == *"/bash-utilities.sh" ]]; then
   SCRIPT_NAME="bash-utilities"
   SCRIPT_DESCRIPTION="Tool to manage my collection of Bash scripts."
   SCRIPT_DESCRIPTION_ES="Herramienta para gestionar mi colección de scripts de Bash."
-  SCRIPT_VERSION="24.05.13"
+  SCRIPT_VERSION="24.05.16"
   SCRIPT_SEE="https://github.com/sergio-ridaura/bash-scripts"
 fi
 
@@ -132,6 +132,26 @@ if [[ "${ARG_BASH_M}" == false ]]; then
   echo -e "${TEXT_INFO}---${TEXT_DEFAULT}"
 fi
 
+# clean arguments
+args_to_remove=("-c" "--clear" "-h" "--help" "-m" "--mute" "-n" "--not" "-q" "--quiet" "-s" "--short" "-u" "--sudo" "-v" "--version" "-y" "--yes")
+
+new_args=()
+
+for arg in "$@"; do
+  remove=false
+  for remove_arg in "${args_to_remove[@]}"; do
+    if [[ "$arg" == "$remove_arg" ]]; then
+      remove=true
+      break
+    fi
+  done
+  if ! $remove; then
+    new_args+=("$arg")
+  fi
+done
+
+set -- "${new_args[@]}"
+
 # errors
 ERROR_ARGUMENT_MISSING() {
   echo -e "${TEXT_DANGER}ERROR: \"${SCRIPT_ARG[$1]}\" argument is missing${TEXT_DEFAULT}" && exit 1
@@ -141,4 +161,8 @@ ERROR_NOT_FOUND() {
   echo -e "${TEXT_DANGER}ERROR: \"${1}\" not found${TEXT_DEFAULT}" && exit 1
 }
 
-unset "element" "arg"
+ERROR_FOUND() {
+  echo -e "${TEXT_DANGER}ERROR: \"${1}\" found${TEXT_DEFAULT}" && exit 1
+}
+
+unset "element" "arg" "new_args" "args_to_remove" "remove"

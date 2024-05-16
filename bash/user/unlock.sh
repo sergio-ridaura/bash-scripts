@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="user_unlock"
 SCRIPT_DESCRIPTION="Removes a user's lock on the system."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Elimina el bloqueo de un usuario en el sistema."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://linuxize.com/post/usermod-command-in-linux/"
 SCRIPT_ARG=(user)
 
@@ -10,9 +11,9 @@ SCRIPT_ARG=(user)
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # arguments
-[ $# -eq 0 ] && echo -e "${TEXT_DANGER}ERROR: arguments are missing${TEXT_DEFAULT}" && exit 1
-
-user=$1
+[ $# -ge 1 ] && user="$1"
+[ "$user" == "" ] && ERROR_ARGUMENT_MISSING 0
+! id "$user" &>/dev/null && ERROR_NOT_FOUND "$user"
 
 # unlock
 if [ "$ARG_BASH_H" != true ]; then

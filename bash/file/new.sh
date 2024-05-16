@@ -3,7 +3,7 @@
 SCRIPT_NAME="file_new"
 SCRIPT_DESCRIPTION="Create new file."
 SCRIPT_DESCRIPTION_ES="Crear nuevo archivo."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://phoenixnap.com/kb/touch-command-in-linux"
 SCRIPT_ARG=(file)
 
@@ -13,6 +13,7 @@ SCRIPT_ARG=(file)
 # arguments
 [ $# -ge 1 ] && file="$1"
 [ "$file" == "" ] && ERROR_ARGUMENT_MISSING 0
+[ -f "$file" ] && ERROR_FOUND "$file"
 
 # new
 if [ "$ARG_BASH_H" != true ]; then

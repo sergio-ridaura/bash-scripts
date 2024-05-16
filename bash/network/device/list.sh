@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="network_device_list"
 SCRIPT_DESCRIPTION="Shows the devices connected to the network that I am in."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION="Muestra los dispositivos conectados a la red en la que estoy."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://linuxize.com/post/fdisk-command-in-linux/"
 
 # tools
