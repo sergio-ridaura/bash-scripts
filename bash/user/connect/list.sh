@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="user_connect_list"
 SCRIPT_DESCRIPTION="List the users connected to the computer."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Enumere a los usuarios conectados a la computadora."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://linuxhandbook.com/linux-list-users/"
 
 # tools

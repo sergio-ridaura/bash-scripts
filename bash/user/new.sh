@@ -2,7 +2,8 @@
 
 SCRIPT_NAME="user_password"
 SCRIPT_DESCRIPTION="Add or change the user's password in the system."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Agregar o cambiar la contraseña del usuario en el sistema."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://www.geeksforgeeks.org/useradd-command-in-linux-with-examples/"
 SCRIPT_ARG=(user folder)
 
@@ -10,9 +11,9 @@ SCRIPT_ARG=(user folder)
 . "$(dirname "$0")/../bash-utilities.sh"
 
 # arguments
-[ $# -lt 1 ] && echo -e "${TEXT_DANGER}ERROR: arguments are missing${TEXT_DEFAULT}" && exit 1
-
-user=$1
+[ $# -ge 1 ] && user="$1"
+[ "$user" == "" ] && ERROR_ARGUMENT_MISSING 0
+id "$user" &>/dev/null && ERROR_FOUND "$user"
 
 [ $# -ge 2 ] && [ "$2" == "true" ] && folder=" -m"
 
