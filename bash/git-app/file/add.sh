@@ -2,26 +2,22 @@
 
 SCRIPT_NAME="git-app_file_add"
 SCRIPT_DESCRIPTION="Add file to Git commit."
-SCRIPT_VERSION="24.05.14"
+SCRIPT_DESCRIPTION_ES="Agregar archivo al compromiso de Git."
+SCRIPT_VERSION="24.05.16"
 SCRIPT_SEE="https://git-scm.com/docs/git-add/es"
 SCRIPT_ARG=(file)
 
 # tools
-. "$(dirname "$0")/../bash-utilities.sh"
+. "$(dirname "$0")/../../bash-utilities.sh"
 
 # arguments
-file="$1"
-[ $# -eq 0 ] && file="."
+[ $# -ge 1 ] && file="$1"
+[ "$file" == "" ] && ERROR_ARGUMENT_MISSING 0
 
 # add
 if [ "$ARG_BASH_H" != true ]; then
-  echo -en "$TEXT_DANGER"
-  if git add "$file"; then
-    echo -en "$TEXT_DEFAULT"
-    if [ "$ARG_BASH_S" = true ]; then
-      echo "add $file"
-    fi
+  git add "$file"
+  if [ "$ARG_BASH_S" = true ]; then
+    echo "add $file"
   fi
 fi
-
-echo -en "$TEXT_DEFAULT"

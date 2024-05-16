@@ -141,4 +141,8 @@ ERROR_NOT_FOUND() {
   echo -e "${TEXT_DANGER}ERROR: \"${1}\" not found${TEXT_DEFAULT}" && exit 1
 }
 
+ERROR_FOUND() {
+  echo -e "${TEXT_DANGER}ERROR: \"${1}\" found${TEXT_DEFAULT}" && exit 1
+}
+
 unset "element" "arg"

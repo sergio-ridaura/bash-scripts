@@ -1,8 +1,8 @@
 #!/bin/bash
 
-LAYOUT_NAME="github-cli"
+LAYOUT_NAME="gh"
 LAYOUT_APP="GitHub CLI"
-LAYOUT_VERSION="24.05.14"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://cli.github.com/"
 
 # template

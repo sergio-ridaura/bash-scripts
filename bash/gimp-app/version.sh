@@ -2,15 +2,11 @@
 
 LAYOUT_NAME="gimp"
 LAYOUT_APP="Gimp"
-LAYOUT_VERSION="24.05.13"
+LAYOUT_VERSION="24.05.16"
 LAYOUT_SEE="https://www.gimp.org/"
 
-LAYOUT_CODE() {
-  gimp --version
-}
-
 LAYOUT_CODE_SHORT() {
-  echo $(LAYOUT_CODE 2>&1 | grep -oP 'versión \K\d+\.\d+\.\d+')
+  echo $(LAYOUT_CODE 2>&1 | grep -oP 'version \K\d+\.\d+\.\d+')
 }
 
 # template
