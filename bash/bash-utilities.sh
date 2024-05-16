@@ -133,10 +133,20 @@ if [[ "${ARG_BASH_M}" == false ]]; then
 fi
 
 # clean arguments
+args_to_remove=("-c" "--clear" "-h" "--help" "-m" "--mute" "-n" "--not" "-q" "--quiet" "-s" "--short" "-u" "--sudo" "-v" "--version" "-y" "--yes")
+
 new_args=()
+
 for arg in "$@"; do
-  if [[ ! "${arg}" =~ ^-[a-zA-Z]$ ]]; then
-    new_args+=("${arg}")
+  remove=false
+  for remove_arg in "${args_to_remove[@]}"; do
+    if [[ "$arg" == "$remove_arg" ]]; then
+      remove=true
+      break
+    fi
+  done
+  if ! $remove; then
+    new_args+=("$arg")
   fi
 done
 
@@ -155,4 +165,4 @@ ERROR_FOUND() {
   echo -e "${TEXT_DANGER}ERROR: \"${1}\" found${TEXT_DEFAULT}" && exit 1
 }
 
-unset "element" "arg" "new_args"
+unset "element" "arg" "new_args" "args_to_remove" "remove"
