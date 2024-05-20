@@ -2,7 +2,7 @@ if [ -z "$LAYOUT_NAME" ]; then
   SCRIPT_NAME="template_install"
   SCRIPT_DESCRIPTION="Install script template."
   SCRIPT_DESCRIPTION_ES="Plantilla de script install."
-  SCRIPT_VERSION="24.05.14"
+  SCRIPT_VERSION="24.05.18"
 else
   SCRIPT_NAME="$LAYOUT_NAME-app_install"
   SCRIPT_DESCRIPTION="$LAYOUT_APP application installation."
@@ -23,5 +23,9 @@ fi
 
 # install
 if [ -n "$LAYOUT_NAME" ] && [ "$ARG_BASH_H" != true ]; then
-  LAYOUT_CODE
+  if ! command -v $LAYOUT_NAME &>/dev/null; then
+    LAYOUT_CODE
+  else
+    echo $LAYOUT_APP is already
+  fi
 fi
