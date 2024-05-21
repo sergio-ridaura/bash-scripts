@@ -2,7 +2,7 @@ if [ -z "$LAYOUT_NAME" ]; then
   SCRIPT_NAME="template_whatis"
   SCRIPT_DESCRIPTION="Whatis script template."
   SCRIPT_DESCRIPTION_ES="Plantilla de script whatis."
-  SCRIPT_VERSION="24.05.13"
+  SCRIPT_VERSION="24.05.18"
 else
   SCRIPT_NAME="$LAYOUT_NAME-app_version"
   SCRIPT_DESCRIPTION="Get description of the $LAYOUT_APP application."
@@ -17,9 +17,13 @@ DEV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # whatis
 if [ -n "$LAYOUT_NAME" ] && [ "$ARG_BASH_H" != true ]; then
-  if [ "$(echo "$LANG" | cut -d '_' -f 1)" == "es" ]; then
-    LAYOUT_CODE
+  if command -v $LAYOUT_NAME &>/dev/null; then
+    if [ "$(echo "$LANG" | cut -d '_' -f 1)" == "es" ]; then
+      LAYOUT_CODE
+    else
+      LAYOUT_CODE_ES
+    fi
   else
-    LAYOUT_CODE_ES
+    ERROR_NOT_FOUND "$LAYOUT_APP"
   fi
 fi
