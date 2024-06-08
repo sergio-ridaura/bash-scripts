@@ -7,7 +7,8 @@ LAYOUT_SEE="https://mega.io/"
 
 LAYOUT_CODE() {
   echo "\
-- Official website    https://mega.nz/"
+- Official website    https://mega.nz/
+- Wikipedia           https://en.wikipedia.org/wiki/Mega_(service)"
 }
 
 # template
