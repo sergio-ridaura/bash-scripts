@@ -1,4 +1,4 @@
-# Bash scripts v24.06.08
+# Bash scripts v24.06.14
 
 _Copyright (c) 2024 [Sergio Ridaura](https://github.com/sergio-ridaura)._
 
@@ -8,7 +8,10 @@ My Bash script collection.
 
 Collection of my [Bash](https://www.gnu.org/software/bash/) scripts with a tool for managing them.
 
-[![Bash](https://img.shields.io/badge/bash-333333.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+<p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
+  <a href="https://www.gnu.org/software/bash/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/bash-333333.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash">
+</p>
 
 ## Install
 
@@ -60,31 +63,63 @@ In the scripts, there are flags to modify the default behavior. For example, if 
 ./bash/ubuntu/update.sh -s -m
 ```
 
-- `-c` / `--clear`:   Clears the screen before executing the script.
-- `-h` / `--help`:    Displays information and does not execute the script.
-- `-m` / `--mute`:    Does not display script information on the screen.
-- `-n` / `--not`:     Answers No to script questions.
-- `-q` / `--quiet`:   Runs in quiet mode.
-- `-s` / `--short`:   Short response.
-- `-u` / `--sudo`:    Runs as sudo user.
+- `-c` / `--clear`: Clears the screen before executing the script.
+- `-h` / `--help`: Displays information and does not execute the script.
+- `-m` / `--mute`: Does not display script information on the screen.
+- `-n` / `--not`: Answers No to script questions.
+- `-q` / `--quiet`: Runs in quiet mode.
+- `-s` / `--short`: Short response.
+- `-u` / `--sudo`: Runs as sudo user.
 - `-v` / `--version`: Displays the script version.
-- `-y` / `--yes`:     Answers Yes to script questions.
+- `-y` / `--yes`: Answers Yes to script questions.
 
 ## Export
 
-Add an empty `bash` folder to your repository and copy the `.env.bash`, `.env.bash.default` and `bash/bash-utilities.sh` files.
+Copy the `.env.bash`, `.env.bash.default` and `bash/bash-utilities.sh` files an add empty `bash` folder to your repository.
 
 Add your scripts or copy the scripts you consider from this collection to the `bash` folder.
 
 ## Author
 
-Full stack developer: [TypeScript](https://www.typescriptlang.org/), [AssemblyScript](https://www.assemblyscript.org/), [Astro](https://astro.build/), [React.js](https://es.react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Node.js](https://nodejs.org/) and [MySQL](https://www.mysql.com/).
+Full stack developer: TypeScript, AssemblyScript, Astro, React, Tailwind, Node and MySQL.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-0078D4?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) &nbsp; [![AssemblyScript](https://img.shields.io/badge/assemblyscript-0078D4.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)](https://www.assemblyscript.org/) &nbsp; [![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/) &nbsp; [![React](https://img.shields.io/badge/react-333333.svg?style=for-the-badge&logo=react&logoColor=white)](https://es.react.dev/) &nbsp; [![Tailwind](https://img.shields.io/badge/tailwind-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) &nbsp; [![Node](https://img.shields.io/badge/node-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/) &nbsp; [![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+<p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
+  <a href="https://www.typescriptlang.org/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/TypeScript-0078D4?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  </a>
+  <a href="https://www.assemblyscript.org/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/assemblyscript-0078D4.svg?style=for-the-badge&logo=assemblyscript&logoColor=white" alt="AssemblyScript">
+  </a>
+  <a href="https://astro.build/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white" alt="Astro">
+  </a>
+  <a href="https://es.react.dev/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/react-333333.svg?style=for-the-badge&logo=react&logoColor=white" alt="React">
+  </a>
+  <a href="https://tailwindcss.com/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/tailwind-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind">
+  </a>
+  <a href="https://nodejs.org/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/node-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node">
+  </a>
+  <a href="https://www.mysql.com/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  </a>
+</p>
 
 Fast development of high-performance web applications and sites.
 
-[![Email](https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:sergio.ridaura@outlook.com) &nbsp; [![GitHub](https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=)](https://github.com/sergio-ridaura) &nbsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-ridaura/)
+<p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
+  <a href="mailto:sergio.ridaura@outlook.com">
+    <img style="margin:5px;" src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email">
+  </a>
+  <a href="https://github.com/sergio-ridaura">
+    <img style="margin:5px;" src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/sergio-ridaura/">
+    <img style="margin:5px;" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+</p>
 
 ## MIT License
 
