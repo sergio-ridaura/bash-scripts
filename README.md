@@ -1,21 +1,24 @@
-# Bash scripts v24.06.16
+# Bash scripts v24.06.17
 
 _Copyright (c) 2024 [Sergio Ridaura](https://github.com/sergio-ridaura)._
 
-My Bash script collection.
+A collection of my [Bash](https://www.gnu.org/software/bash/) scripts with a tool easy management.
+
+[<img alt="Bash" src="https://img.shields.io/badge/bash-333333.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" />](https://www.gnu.org/software/bash/)
 
 ## Description
 
-Collection of my [Bash](https://www.gnu.org/software/bash/) scripts with a tool for managing them.
+I have been using the [shell](<https://en.wikipedia.org/wiki/Shell_(computing)>) for many years, starting with [AmigaDOS](https://en.wikipedia.org/wiki/AmigaDOS), [MS-DOS](https://en.wikipedia.org/wiki/MS-DOS), and [Linux](https://en.wikipedia.org/wiki/Linux). However, I use Bash less and less. As a full stack developer, I focus on developing with backend and frontend languages. Generally, I use Bash sporadically, mainly when starting a new project or participating in infrastructure development or deployment.
 
-<p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
-  <a href="https://www.gnu.org/software/bash/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/bash-333333.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash">
-</p>
+This collection helps me keep handy a compilation of commands that interest me and that are easy to forget after not using them for a long time. That's why some scripts may seem very simple or unnecessary in a collection.
+
+On the other hand, I use the shell for repetitive tasks in the [Git](https://git-scm.com/) version manager, [Node.js](https://nodejs.org/) tools, publishing [npm](https://www.npmjs.com/) packages, etc. Having these tasks automated helps me in development.
+
+I invite you to use my collection, give me ideas for new scripts, or participate in the development of new ones.
 
 ## Install
 
-Clone the project with [Git](https://git-scm.com/).
+Clone the project with [Git](https://git-scm.com/) on your desired computer for use.
 
 ```code
 git clone https://github.com/sergio-ridaura/bash-scripts
@@ -41,6 +44,16 @@ Run the script with the required parameters from the terminal. For example, to u
 ./bash/ubuntu/update.sh
 ```
 
+Use tab completion to quickly access commands by typing the beginning of the script and pressing the tab key. For example:
+
+```console
+./b [TAB] ub [TAB] up [TAB]
+```
+
+This allows you to automatically complete script or command names based on what you've typed so far, streamlining navigation and execution on the command line.
+
+### Docker
+
 You can test or develop the scripts in a secure environment using a [Docker Compose](https://docs.docker.com/compose/) container.
 
 Start the container with [Docker Compose](https://docs.docker.com/compose/).
@@ -60,7 +73,7 @@ docker exec -it bash-scripts_node bash
 In the scripts, there are flags to modify the default behavior. For example, if you want to view the script version and not display its complete information:
 
 ```console
-./bash/ubuntu/update.sh -s -m
+./bash/ubuntu/update.sh -v -m
 ```
 
 - `-c` / `--clear`: Clears the screen before executing the script.
@@ -79,35 +92,19 @@ Copy the `.env.bash`, `.env.bash.default` and `bash/bash-utilities.sh` files an 
 
 Add your scripts or copy the scripts you consider from this collection to the `bash` folder.
 
+## Collaborations
+
+I welcome contributions to this project! Whether you have ideas for new scripts, improvements to existing ones, or want to help with development, your input is valuable. Here’s how you can contribute:
+
+1. **Fork the Repository**: Create your own copy of this project by forking the repository.
+2. **Create a Branch**: Develop your feature or fix in a new branch.
+3. **Submit a Pull Request**: Once your changes are ready, submit a pull request for review.
+
+Feel free to open issues for discussion or suggestions. Let’s make this project better together!
+
 ## Author
 
-Full stack developer: TypeScript, AssemblyScript, Astro, React, Tailwind, Node and MySQL.
-
-<p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
-  <a href="https://www.typescriptlang.org/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/TypeScript-0078D4?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  </a>
-  <a href="https://www.assemblyscript.org/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/assemblyscript-0078D4.svg?style=for-the-badge&logo=assemblyscript&logoColor=white" alt="AssemblyScript">
-  </a>
-  <a href="https://astro.build/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white" alt="Astro">
-  </a>
-  <a href="https://es.react.dev/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/react-333333.svg?style=for-the-badge&logo=react&logoColor=white" alt="React">
-  </a>
-  <a href="https://tailwindcss.com/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/tailwind-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind">
-  </a>
-  <a href="https://nodejs.org/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/node-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node">
-  </a>
-  <a href="https://www.mysql.com/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-  </a>
-</p>
-
-Fast development of high-performance web applications and sites.
+**[Sergio Ridaura](https://github.com/sergio-ridaura)**: Full Stack Developer specializing in [TypeScript](https://www.typescriptlang.org/), [AssemblyScript](https://www.assemblyscript.org/), [Astro](https://astro.build/), [React.js](https://es.react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Node.js](https://nodejs.org/) and [MySQL](https://www.mysql.com/). Expertise in rapid development of high-performance web applications and sites.
 
 <p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
   <a href="mailto:sergio.ridaura@outlook.com">
