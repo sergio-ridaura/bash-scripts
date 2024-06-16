@@ -17,6 +17,7 @@ if [ "$ARG_BASH_H" != true ]; then
   "${SCRIPTS_PATH}/edge-app/install.sh" "-y" "-m"
   "${SCRIPTS_PATH}/chrome-app/install.sh" "-y" "-m"
   "${SCRIPTS_PATH}/code-app/install.sh" "-y" "-m"
+  "${SCRIPTS_PATH}/code-app/extensions/astro.sh" "-m"
   "${SCRIPTS_PATH}/gimp-app/install.sh" "-y" "-m"
   "${SCRIPTS_PATH}/inkscape-app/install.sh" "-y" "-m"
 fi
