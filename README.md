@@ -1,10 +1,10 @@
-# Bash scripts v24.06.17
+# Bash scripts v24.06.16
 
 _Copyright (c) 2024 [Sergio Ridaura](https://github.com/sergio-ridaura)._
 
 A collection of my [Bash](https://www.gnu.org/software/bash/) scripts with a tool easy management.
 
-[<img alt="Bash" src="https://img.shields.io/badge/bash-333333.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" />](https://www.gnu.org/software/bash/)
+[<img alt="Bash" src="https://img.shields.io/badge/BASH-333333?style=for-the-badge&logo=gnu-bash&logoColor=FFFFFF" />](https://www.gnu.org/software/bash/)
 
 ## Description
 
@@ -104,19 +104,11 @@ Feel free to open issues for discussion or suggestions. Let’s make this projec
 
 ## Author
 
-**[Sergio Ridaura](https://github.com/sergio-ridaura)**: Full Stack Developer specializing in [TypeScript](https://www.typescriptlang.org/), [AssemblyScript](https://www.assemblyscript.org/), [Astro](https://astro.build/), [React.js](https://es.react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Node.js](https://nodejs.org/) and [MySQL](https://www.mysql.com/). Expertise in rapid development of high-performance web applications and sites.
+### [Sergio Ridaura](https://github.com/sergio-ridaura)
 
-<p style="display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap;">
-  <a href="mailto:sergio.ridaura@outlook.com">
-    <img style="margin:5px;" src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email">
-  </a>
-  <a href="https://github.com/sergio-ridaura">
-    <img style="margin:5px;" src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=" alt="GitHub">
-  </a>
-  <a href="https://www.linkedin.com/in/sergio-ridaura/">
-    <img style="margin:5px;" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-</p>
+Full Stack Developer specializing in [TypeScript](https://www.typescriptlang.org/), [AssemblyScript](https://www.assemblyscript.org/), [Astro](https://astro.build/), [React.js](https://es.react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Node.js](https://nodejs.org/) and [MySQL](https://www.mysql.com/). Expertise in rapid development of high-performance web applications and sites.
+
+[<img alt="Email" src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=FFFFFF" />](mailto:sergio.ridaura@outlook.com) &nbsp; [<img alt="GitHub" src="https://img.shields.io/badge/GitHub-333333?style=for-the-badge&color=181717&logo=github&logoColor=FFFFFF" />](https://github.com/sergio-ridaura) &nbsp; [<img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=FFFFFF" />](https://www.linkedin.com/in/sergio-ridaura/) &nbsp;
 
 ## MIT License
 
