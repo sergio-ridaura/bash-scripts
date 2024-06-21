@@ -3,7 +3,7 @@
 SCRIPT_NAME="folder_execution_edit"
 SCRIPT_DESCRIPTION="Change the execution permissions of the files within the folder."
 SCRIPT_DESCRIPTION_ES="Cambiar los permisos de ejecución de los archivos dentro de la carpeta."
-SCRIPT_VERSION="24.06.14"
+SCRIPT_VERSION="24.06.18"
 SCRIPT_SEE="https://manpages.debian.org/bookworm/manpages-es/chmod.1.es.html"
 SCRIPT_ARG=(folder type execution)
 
@@ -17,12 +17,9 @@ SCRIPT_ARG=(folder type execution)
 [ $# -ge 2 ] && type="$2" || type="*.sh"
 
 [ $# -ge 3 ] && execution="$3" || execution="true"
+[ "$execution" == "true" ] && execution="-x" || execution="+x"
 
 # edit
 if [ "$ARG_BASH_H" != true ]; then
-  if [ "$execution" == true ]; then
-    $IS_ROOT find "$folder" -type f -name "$type" -exec chmod +x {} \; -printf "%p\n"
-  else
-    $IS_ROOT find "$folder" -type f -name "$type" -exec chmod -x {} \; -printf "%p\n"
-  fi
+  $IS_ROOT find "$folder" -type f -name "$type" -exec chmod "$execution" {} \; -printf "%p\n"
 fi

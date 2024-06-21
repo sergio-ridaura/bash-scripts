@@ -1,4 +1,4 @@
-# Bash scripts v24.06.16
+# Bash scripts v24.06.20
 
 _Copyright (c) 2024 [Sergio Ridaura](https://github.com/sergio-ridaura)._
 
@@ -8,7 +8,7 @@ A collection of my [Bash](https://www.gnu.org/software/bash/) scripts with a too
 
 ## Description
 
-I have been using the [shell](<https://en.wikipedia.org/wiki/Shell_(computing)>) for many years, starting with [AmigaDOS](https://en.wikipedia.org/wiki/AmigaDOS), [MS-DOS](https://en.wikipedia.org/wiki/MS-DOS), and [Linux](https://en.wikipedia.org/wiki/Linux). However, I use Bash less and less. As a full stack developer, I focus on developing with backend and frontend languages. Generally, I use Bash sporadically, mainly when starting a new project or participating in infrastructure development or deployment.
+I have been using the [Shell](<https://en.wikipedia.org/wiki/Shell_(computing)>) for many years, starting with [AmigaDOS](https://en.wikipedia.org/wiki/AmigaDOS), [MS-DOS](https://en.wikipedia.org/wiki/MS-DOS), and [Linux](https://en.wikipedia.org/wiki/Linux). However, I use Bash less and less. As a full stack developer, I focus on developing with backend and frontend languages. Generally, I use Bash sporadically, mainly when starting a new project or participating in infrastructure development or deployment.
 
 This collection helps me keep handy a compilation of commands that interest me and that are easy to forget after not using them for a long time. That's why some scripts may seem very simple or unnecessary in a collection.
 
@@ -18,7 +18,7 @@ I invite you to use my collection, give me ideas for new scripts, or participate
 
 ## Install
 
-Clone the project with [Git](https://git-scm.com/) on your desired computer for use.
+Clone the project with Git on your desired computer for use.
 
 ```code
 git clone https://github.com/sergio-ridaura/bash-scripts
@@ -62,7 +62,7 @@ Start the container with [Docker Compose](https://docs.docker.com/compose/).
 docker-compose up -d
 ```
 
-Access the [Ubuntu](https://ubuntu.com/) container:
+Access the Ubuntu container:
 
 ```code
 docker exec -it bash-scripts_node bash
@@ -100,7 +100,7 @@ I welcome contributions to this project! Whether you have ideas for new scripts,
 2. **Create a Branch**: Develop your feature or fix in a new branch.
 3. **Submit a Pull Request**: Once your changes are ready, submit a pull request for review.
 
-Feel free to open issues for discussion or suggestions. Let’s make this project better together!
+Feel free to open **Issues** for discussion or suggestions. Let’s make this project better together!
 
 ## Author
 
